@@ -3,7 +3,7 @@
     <parent>
         <artifactId>spring-pet-clinic</artifactId>
         <groupId>urban.springframework</groupId>
-        <version>0.0.1</version>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -11,6 +11,7 @@
 
     <properties>
         <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
+        <project.scm.id>GitHub</project.scm.id>
     </properties>
 
     <dependencies>

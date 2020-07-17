@@ -3,17 +3,20 @@
     <parent>
         <artifactId>spring-pet-clinic</artifactId>
         <groupId>urban.springframework</groupId>
-        <version>0.0.1</version>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>pet-clinic-web</artifactId>
+    <properties>
+        <project.scm.id>GitHub</project.scm.id>
+    </properties>
 
     <dependencies>
         <dependency>
             <artifactId>pet-clinic-data</artifactId>
             <groupId>urban.springframework</groupId>
-            <version>0.0.1</version>
+            <version>0.0.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
