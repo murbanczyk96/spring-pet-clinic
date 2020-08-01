@@ -13,6 +13,7 @@ public class Vet extends Person{
             inverseJoinColumns = @JoinColumn("speciality_id"))
     private Set<Speciality> specialities = new HashSet<>();
 
+
     public Set<Speciality> getSpecialities() {
         return specialities;
     }
