@@ -13,6 +13,7 @@ import urban.springframework.springpetclinic.model.Owner;
 import urban.springframework.springpetclinic.services.OwnerService;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -73,6 +74,14 @@ class OwnerControllerTest {
         mockMvc.perform(MockMvcRequestBuilders.get("/owners"))
                 .andExpect(status().is3xxRedirection())
                 .andExpect(view().name("redirect:/owners/1"));
+    }
+
+    @Test
+    void processFindFormReturnAll() throws Exception {
+        when(ownerService.findAllByLastNameLikeIgnoreCase(anyString())).thenReturn(Collections.emptyList());
+        mockMvc.perform(MockMvcRequestBuilders.get("/owners"))
+                .andExpect(status().isOk())
+                .andExpect(view().name("owners/findOwners"));
     }
 
     @Test
